@@ -1,0 +1,13 @@
+{
+  "name": "ionic-push-two",
+  "app_id": "ff9c7a36",
+  "gulpStartupTasks": [
+    "sass",
+    "watch"
+  ],
+  "watchPatterns": [
+    "www/**/*",
+    "!www/lib/**/*",
+    "!www/**/*.map"
+  ]
+}

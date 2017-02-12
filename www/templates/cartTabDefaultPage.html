@@ -1,0 +1,51 @@
+<ion-view title="Cart Tab Default Page" id="page3">
+  <ion-content padding="true" class="has-header">
+    <ion-list id="cartTabDefaultPage-list4">
+      <div ng-repeat="item in userList">
+        <ion-item class="item-avatar item-icon-right" id="cartTabDefaultPage-list-item10" ng-click="toggleShowMe(item.UserId);">
+           <img ng-src="{{item.Image}}">
+          <div>
+            <h2>{{item.UserName}}</h2>
+            <p>{{item.FromDate}} - {{item.ToDate}}</p>
+          </div>
+          <i class="icon " ng-class="{'ion-chevron-right':!showMe[item.UserId],'ion-chevron-down':showMe[item.UserId],}"></i>
+
+        </ion-item>
+        <div class="list card" id="cartTabDefaultPage-card22" ng-show="showMe[item.UserId]">
+          <div class="item item-body" id="cartTabDefaultPage-list-item-container6">
+            <h3 id="cartTabDefaultPage-heading3" style="color:#000000;">Leave Type:</h3>
+            <div id="cartTabDefaultPage-markdown13" class="show-list-numbers-and-dots">
+              <p style="color:#000000;">Seak Leave</p>
+            </div>
+            <h3 id="cartTabDefaultPage-heading4" style="color:#000000;">Applied On : </h3>
+            <div id="cartTabDefaultPage-markdown15" class="show-list-numbers-and-dots">
+              <p style="color:#000000;">01 Mar 2017</p>
+            </div>
+            <h3 id="cartTabDefaultPage-heading5" style="color:#000000;">Reason</h3>
+            <div id="cartTabDefaultPage-markdown16" class="show-list-numbers-and-dots">
+              <p style="color:#000000;">As I will suffer from Projevt Review.</p>
+            </div>
+            <form id="cartTabDefaultPage-form3" class="list">
+              <label class="item item-select" id="cartTabDefaultPage-select1">
+            <span class="input-label">Apply as</span>
+            <select>
+              <option>Seak Leave</option>
+              <option>LOS</option>
+            </select>
+          </label>
+            </form>
+            <form id="cartTabDefaultPage-form4" class="list">
+              <label class="item item-input" id="cartTabDefaultPage-textarea1">
+            <span class="input-label">Comments*</span><textarea placeholder="Enter your comments."></textarea></label>
+            </form>
+            <div id="cartTabDefaultPage-button-bar1" class="button-bar">
+              <button id="cartTabDefaultPage-button6" class="button button-dark button-small button-block icon ion-android-cancel"></button>
+              <button id="cartTabDefaultPage-button8" class="button button-positive button-small button-block icon ion-checkmark-circled"></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ion-list>
+
+  </ion-content>
+</ion-view>
